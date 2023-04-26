@@ -1,0 +1,94 @@
+.bio{
+    opacity: 0;
+    animation: showTree 1s linear 0.1s 1 forwards;
+    display: flex;
+    justify-content: center;
+    .bio-form{
+        transition: all 0.2s;
+        // background-color: rgba(171,59,97,0.8);
+        background-color: rgba(186,178,181,0.8);
+        display: flex;
+        flex-wrap: wrap;
+        color: rgb(171,59,97);
+        gap: 1vw;
+        
+        // position: absolute;
+        // top: 60px;
+        // left: 2%;
+        // right: 2%;
+        // bottom: 0%;
+        // width: 96%;
+        // margin-top: 80px;
+        width: 96%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-top: 7vh;
+        // padding: 100px;
+        // padding-top: 80px;
+        // padding-bottom: 50px;
+        border: 1px solid black;
+        // box-shadow: 2.5px 2.5px 2.5px 2.5px black;
+        outline: 1px none black;
+        position: relative;
+        height: 90vh;
+        padding-bottom: 4vh;
+        // &:hover {
+        &-title{
+            text-align: center;
+            font-size: 2rem;
+            background-color: rgb(171,59,97);
+            color: #eee3dc;;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            width: 100%;
+            padding: 7vh 0px 2vh 0px;
+            position: absolute;
+            z-index: 3;
+        }
+        &-displaydata{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // gap: 20px;
+            overflow-y: scroll;
+            padding-top: 20vh;
+            width: 96%;
+            &-content{
+                
+                background-color: #eee3dc;
+                width: 80%;
+                padding: 20px;
+                padding-bottom: 50px;
+                border: 2px solid rgb(171,59,97);
+                border-radius: 10px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                // gap: 30px;
+                
+            }
+        }
+        .Validators {
+            // margin: 0px 0px 0px 0px;
+            color: red;
+            margin-top: 10px;
+            font-size: small;
+            float: right;
+            margin-top: -0px;
+        }
+        .home-header-back{
+            cursor: pointer;
+            position: absolute;
+            top: 2vh;
+            z-index: 5;
+            left: 17px;
+            background-color: #eee3dc;
+            color: rgb(171,59,97);
+            padding: 1px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+    }
+}

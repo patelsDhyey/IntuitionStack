@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto+Mono:wght@100;400;600;700&display=swap');
+@import "reset";
+
+
+body {
+    
+    background-size: contain;
+    background: linear-gradient(to right, rgba(239,220,213,0.6) 1%, rgba(239,220,213,0.6) 1% 80%, rgba(239,220,213,0.6) 80% 100%), url("./img/Wallpaper.png");
+    background-color: rgb(171,59,97);
+    font-family: 'Itim', cursive;
+    background-position: center;
+
+    input {
+        transition: all 0.5s;
+        border: none;
+        display: grid;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: large;
+        margin: 10px 0px 0px 0px;
+        color: rgb(171, 59, 97);
+        border: 1px solid rgb(171, 59, 97);
+        &:hover,
+        &:focus {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            // border-style: dashed;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgb(171,59,97);
+            // box-shadow: 1px 1px 2px #15133C,2px 2px 3px #EC994B,3px 3px 5px #15133C;
+            outline: 2px solid  rgb(171,59,97);
+        }
+    }
+
+    select{
+        transition: all 0.5s;
+        border: none;
+        display: grid;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: large;
+        margin: 10px 0px 0px 0px;
+        color: rgb(171, 59, 97);
+        border: 1px solid rgb(171, 59, 97);
+        &:hover,
+        &:focus {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            // border-style: dashed;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgb(171,59,97);
+            // box-shadow: 1px 1px 2px #15133C,2px 2px 3px #EC994B,3px 3px 5px #15133C;
+            outline: 2px solid  rgb(171,59,97);
+        }
+    }
+
+    textarea {
+        min-width: 100%;
+        max-width: 100%;
+        transition: all 0.5s;
+        border: none;
+        display: grid;
+        padding: 10px 20px;
+        width: 100%;
+        font-size: large;
+        border: 1px solid rgb(171, 59, 97);
+        color: rgb(171,59,97);
+        &:hover,
+        &:focus {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            color:  rgb(171,59,97);
+            outline: 2px solid  rgb(171,59,97);
+        }
+    }
+
+    button {
+        transition: all 0.5s;
+        border: none;
+        padding: 10px 20px;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        font-size: x-large;
+        background-color: transparent;
+        outline: 1px solid rgb(171,59,97);
+        color: rgb(171,59,97);
+        &:hover,
+        &:focus {
+            // box-shadow: 3px 3px 3px rgb(94,184,175),3px 3px 3px rgba(49, 134, 52, 0.554),3px 3px 3px rgb(94,184,175);
+            // box-shadow: 1000px 1000px 1000px 1000px;
+            cursor: pointer;
+            left: 0%;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            outline: 2px solid  rgb(171,59,97);
+            background-color: rgb(171,59,97);
+            color: rgb(239,219,210);
+        }
+    }
+}
+
+.card {
+    opacity: 0;
+    animation: showTree 1s linear 0.1s 1 forwards;
+    // background:url("./Signup.png");
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // display: grid;
+    // place-items: center;
+    // background-size: 60%;
+    // background-repeat: no-repeat;
+    // background-position: 80% 11%;
+    &::before {
+        content: "";
+        // background: url("./Signup.png");
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: -1%;
+        transform: translateY(-50%);
+        height: 100vh;
+        width: 100vw;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        // opacity: 0;
+        // animation: showTree 1s linear 2.5s 1 forwards;
+    }
+    .Validators-Top{
+            background-color: rgba(228, 52, 52,0.9);
+            color:white;
+            
+            padding: 10px 40px;
+            width: 40vw;
+            position: absolute;
+            top: 2%;
+            right: 5%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 20px;
+            text-align: center;
+    }
+    .Logo {
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        height: 60px;
+        width: auto;
+        transform: scale(1.5);
+        // opacity: 0;
+        // animation: showTree 1s linear 2.5s 1 forwards;
+    }
+
+    .card-body {
+        background-color: rgba(239,219,210,0.6);
+        color: rgb(171,59,97);
+        opacity: 0.7px;
+        // position: absolute;
+        display: flex;
+        flex-direction: column;
+        // top: 50%;
+        // left: 20%;
+        padding: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-top-right-radius: 70px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 70px;
+        // transform: translateY(-10%);
+        // background: rgba(49, 134, 52, 0.554) ;
+        // border-radius: 2%;
+        box-shadow: 2.5px 2.5px 5px 0.5px black;
+        width: 900px;
+        // max-height: 80vh;
+        z-index: 999;
+        &:hover {
+            box-shadow: 5px 5px 10px 1px black;
+        }
+
+        .card-body-component{
+            margin: 10px 0px 0px 0px;
+            border: 1px solid rgb(171, 59, 97);
+        }
+        .Validators {
+            // margin: 0px 0px 0px 0px;
+            color: red;
+            margin-top: 10px;
+            font-size: small;
+            float: right;
+            margin-top: -0px;
+        }
+        
+        .display-on-call {
+            font-display: hidden;
+            visibility: hidden;
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+
+    .structure {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .structure-child {
+            width: 48%;
+        }
+
+        .structure-child-Address {
+            width: 100%;
+        }
+    }
+
+   
+
+    .side-button-top {
+        position: fixed;
+        transition: all 0.2s;
+        bottom: 200px;
+        left: -10px;
+        text-decoration: none;
+        color: rgb(239,220,213);
+        background-color: rgb(171,59,97);
+        font-size: x-large;
+        width: 10%;
+        padding: 10px 30px 10px 40px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        text-align: center;
+        &:hover,
+        &:focus {
+            background-color: rgb(239,220,213);
+            color: rgb(171,59,97);
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            left: 30px;
+            // outline: 1px solid black;
+        }
+    }
+
+    .side-button {
+        position: fixed;
+        transition: all 0.2s;
+        bottom: 100px;
+        left: -10px;
+        text-decoration: none;
+        background-color: rgb(171,59,97);
+        color: rgb(239,220,213);
+        font-size: x-large;
+        width: 10%;
+        padding: 10px 30px 10px 40px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        text-align: center;
+        &:hover,
+        &:focus {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            left: 30px;
+            background-color: rgb(239,220,213);
+            color: rgb(171,59,97);
+            // outline: 1px solid black;
+        }
+
+    }
+    .side-button-admin{
+        position: fixed;
+        transition: all 0.2s;
+        top: 100px;
+        right: -10px;
+        text-decoration: none;
+        width: 15%;
+        text-align: center;
+        background-color: rgb(171,59,97);
+        color: rgb(239,220,213);
+        font-size: x-large;
+        padding: 10px 30px 10px 40px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+
+        &:hover,
+        &:focus {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 20px;
+            right: 30px;
+            background-color: rgb(239,220,213);
+            color: rgb(171,59,97);
+            // outline: 1px solid black;
+        }
+
+    }
+
+}
+
+.Preloader {
+    z-index: -2;
+    height: 100vh;
+    width: 100vw;
+    // background: linear-gradient(to right,#EC994B 50%,white 50% 50%,#EC994B 50% 100%);
+    // animation: AniLoader 1s 2s 1 forwards;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    place-items: center;
+    animation: hideItems 1s linear 2s 1 forwards;
+    font-size: xx-large;
+
+    &::before {
+
+        position: absolute;
+        content: '';
+        left: 0%;
+        right: 50%;
+        background-color: rgba(239,220,213, 0.554);
+        top: 0%;
+        bottom: 0%;
+        animation: AniLoaderRight 1s linear 2s 1 forwards;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        right: 0%;
+        background-color: rgba(239,220,213, 0.554);
+        top: 0%;
+        bottom: 0%;
+        animation: AniLoaderLeft 1s linear 2s 1 forwards;
+    }
+
+
+}
+
+@keyframes AniLoaderLeft {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes AniLoaderRight {
+    0% {
+        right: 50%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes showTree {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideItems {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+// @media only screen and (max-width: 600px) {
+//     .structure-child {
+//         background-color: red;
+//         width: 100%;
+
+//     }
+// }

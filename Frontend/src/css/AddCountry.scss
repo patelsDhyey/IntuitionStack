@@ -1,0 +1,164 @@
+.addCountry {
+    opacity: 0;
+animation: showTree 1s linear 0.1s 1 forwards;
+
+    .addCountry-menu {
+        transition: all 0.2s;
+        background-color: rgba(239,219,210,0.6);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        color: rgb(171,59,97);
+        gap: 1vw;
+        position: absolute;
+        top: 11%;
+        left: 2%;
+        right: 2%;
+        bottom: 3%;
+        width: 96%;
+        border-top-right-radius: 70px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 70px;
+        padding: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border: 1px solid black;
+        // box-shadow: 2.5px 2.5px 2.5px 2.5px black;
+        outline: 1px none black;
+        // &:hover {
+        //     left: 40%;
+        //     box-shadow: 5px 5px 10px 1px black;
+
+            // &>.addCountry-menu-label {
+            //     // transform: rotate(0deg);
+            //     color: #15133C;
+            //     border-bottom-right-radius: 20px;
+            //     border-bottom-left-radius: 0px;
+            //     border-top-right-radius: 0px;
+            //     border-top-left-radius: 20px;
+            // }
+            // top: 10.5%;
+            // left: 1.5%;
+            // right: 1.5%;
+            // bottom: 1.5%;
+            // width: 97%;
+        // }
+
+        .addCountry-menu-heading{
+            // margin-right: 100%;
+            // place-items: center;
+
+        }
+        // .addCountry-menu-links {
+        //     // position: absolute;
+        //     // background-image: url("orange.png");
+        //     text-decoration: none;
+        //     transition: all 0.2s;
+        //     display: grid;
+        //     color: #15133C;
+        //     font-size: x-large;
+        //     // padding: 10px 25px 10px 10px;
+
+        //     width: 70%;
+        //     // font-size: 80%;
+        //     margin-bottom: 5%;
+
+        //     // transform: translateY(-50%);
+
+        //     border-bottom-right-radius: 0px;
+        //     border-bottom-left-radius: 0px;
+        //     border-top-right-radius: 0px;
+        //     border-top-left-radius: 0px;
+
+        //     padding: 10px 20px;
+
+        //     &:hover,
+        //     &:focus {
+        //         border-bottom-right-radius: 20px;
+        //         border-bottom-left-radius: 0px;
+        //         border-top-right-radius: 0px;
+        //         border-top-left-radius: 20px;
+        //         // left: 30px;
+        //         outline: 0px solid black;
+        //     }
+        // }
+        .validators {
+            // margin: 0px 0px 0px 0px;
+            visibility: visible;
+            color: red;
+            font-size: small;
+            float: right;
+            margin-top: -4%;
+            // padding-bottom: -6%;
+            //margin-bottom: -6px;
+            // visibility: visible;
+            // transition-delay: 10s;
+            // visibility: hidden;
+            // visibility: hidden;
+
+        }
+        .addCountry-submenu{
+            display: flex;
+            justify-content: center;
+            div{
+                width: 80%;
+            }
+        }
+
+    }
+    .addCountry-menu-displaydata{
+        height: 50vh;
+        overflow-y: scroll;
+        border: 1px solid rgb(171,59,97);;
+        padding: 20px ;
+        
+        table{
+            width: 100%;
+            padding: 20px;
+            
+        }
+        th, td {
+            border-bottom: 1px solid rgb(171,59,97);
+            .DeleteIcon{
+                height: 150%;
+                filter: invert(29%) sepia(26%) saturate(2594%) hue-rotate(299deg) brightness(95%) contrast(87%);
+                &:hover, &:focus {
+                    filter: invert(92%) sepia(5%) saturate(724%) hue-rotate(327deg) brightness(104%) contrast(87%);
+                }
+            }
+            .UpdateIcon{
+                height: 150%;
+                filter: invert(29%) sepia(26%) saturate(2594%) hue-rotate(299deg) brightness(95%) contrast(87%);
+                &:hover, &:focus {
+                    filter: invert(92%) sepia(5%) saturate(724%) hue-rotate(327deg) brightness(104%) contrast(87%);
+                }
+            }
+        }
+        .icon{
+            width: 80px;
+            font-size: smaller;
+            text-align: left;
+            height: 30px;
+        }
+    }
+
+}
+#hideMeAfter10Seconds {
+    animation: hideAnimation 1.5s ease-in 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+}
+
+// @media only screen and (max-width: 600px) {
+//     .addCountry-menu-links{
+//         background-color: red;
+//     }
+// }

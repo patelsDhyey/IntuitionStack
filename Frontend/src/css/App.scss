@@ -1,0 +1,115 @@
+.App{
+    
+    .card{
+            
+        animation: showTree 2s linear 2s 1 forwards;
+ 
+        .card-welcome{
+            
+            display: contents;
+            background-color: rgb(239,219,210);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 30%;
+            left:10%;
+            right: 80%;
+            padding: 100px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            transform: translateY(-50%);
+            color: rgb(171,59,97);
+            border-top-right-radius: 70px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 70px;
+            width: 40%;
+            font-size: small;
+            box-shadow: 2.5px 2.5px 5px 0.5px black;
+            &:hover{
+                box-shadow: 5px 5px 10px 1px black;
+            }
+
+        }
+    }
+    
+}
+.Preloader {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    // background: linear-gradient(to right,#EC994B 50%,white 50% 50%,#EC994B 50% 100%);
+    // animation: AniLoader 1s 2s 1 forwards;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    place-items: center;
+    animation: hideItems 1s linear 2s 1 forwards;
+    font-size: xx-large;
+
+    &::before {
+
+        position: absolute;
+        content: '';
+        left: 0%;
+        right: 50%;
+        background-color: rgba(49, 134, 52, 0.554);
+        top: 0%;
+        bottom: 0%;
+        animation: AniLoaderRight 1s linear 2s 1 forwards;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        right: 0%;
+        background-color: rgba(49, 134, 52, 0.554);
+        top: 0%;
+        bottom: 0%;
+        animation: AniLoaderLeft 1s linear 2s 1 forwards;
+    }
+
+
+}
+
+@keyframes AniLoaderLeft {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes AniLoaderRight {
+    0% {
+        right: 50%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes showTree {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideItems {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}

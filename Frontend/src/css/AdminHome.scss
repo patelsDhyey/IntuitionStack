@@ -1,0 +1,94 @@
+.adminhome {
+    opacity: 0;
+animation: showTree 1s linear 0.1s 1 forwards;
+
+    .adminhome-menu {
+        // transition: all 0.5s;
+        background-color: rgba(239,219,210,0.6);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: rgb(171,59,97);
+        gap: 1vw;
+        position: absolute;
+        top: 11%;
+        left: 2%;
+        right: 2%;
+        // transform: translate(-50%, -50%);
+        // height: 87%;
+        bottom: 3%;
+        width: 96%;
+        border-top-right-radius: 70px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 70px;
+        padding: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        // border: 1px dashed black;
+        box-shadow: 2.5px 2.5px 2.5px 2.5px black;
+
+        // &:hover {
+        //     // left: 40%;
+        //     // box-shadow: 5px 5px 10px 1px black;
+
+        //     // &>.adminhome-menu-label {
+        //     //     // transform: rotate(0deg);
+        //     //     color: #15133C;
+        //     //     border-bottom-right-radius: 20px;
+        //     //     border-bottom-left-radius: 0px;
+        //     //     border-top-right-radius: 0px;
+        //     //     border-top-left-radius: 20px;
+        //     // }
+        // }
+
+        div {
+            width: 27%;
+        }
+
+        .adminhome-menu-heading{
+            // margin-right: 100%;
+
+        }
+        .adminhome-menu-links {
+            // position: absolute;
+            // background-color: rgb(171,59,97);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: grid;
+            color: #15133C;
+            font-size: x-large;
+            // padding: 10px 25px 10px 10px;
+
+            width: 80%;
+            // font-size: 80%;
+            margin-bottom: 5%;
+
+            // transform: translateY(-50%);
+
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+
+            padding: 10px 20px;
+
+            &:hover,
+            &:focus {
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-top-left-radius: 20px;
+                // left: 30px;
+                outline: 1px solid black;
+            }
+        }
+
+    }
+
+}
+
+// @media only screen and (max-width: 600px) {
+//     .adminhome-menu-links{
+//         background-color: red;
+//     }
+// }
